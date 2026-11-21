@@ -1,0 +1,207 @@
+/* ==========================================================================
+   Editorial Navigation Bar (Transparent over Hero -> Solid Ivory on Scroll)
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 950;
+  background: rgba(247, 245, 239, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.site-header.header-hero-top {
+  position: fixed;
+  width: 100%;
+  background: rgba(22, 60, 50, 0.78);
+  border-bottom-color: rgba(247, 245, 239, 0.14);
+}
+
+.site-header.header-hero-top .brand-logo,
+.site-header.header-hero-top .nav-link {
+  color: var(--ivory);
+}
+
+.site-header.header-hero-top .brand-sub {
+  color: rgba(247, 245, 239, 0.78);
+}
+
+.site-header.header-hero-top .nav-link:hover,
+.site-header.header-hero-top .nav-link.active {
+  background: rgba(247, 245, 239, 0.16);
+  color: var(--ivory);
+}
+
+.site-header.header-hero-top .mobile-toggle {
+  background: rgba(247, 245, 239, 0.15);
+  border-color: rgba(247, 245, 239, 0.3);
+  color: var(--ivory);
+}
+
+.site-header.header-scrolled {
+  position: fixed;
+  width: 100%;
+  background: rgba(247, 245, 239, 0.96);
+  box-shadow: var(--shadow-sm);
+}
+
+.announcement-strip {
+  background: var(--forest-deep);
+  color: var(--ivory);
+  font-size: 0.82rem;
+  padding: 0.42rem 1rem;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.announcement-strip a {
+  color: var(--sage);
+  text-decoration: underline;
+  font-weight: 600;
+  margin-left: 0.45rem;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 74px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--forest-deep);
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--forest-deep), var(--evergreen));
+  border: 1px solid rgba(168, 185, 161, 0.45);
+  color: var(--ivory);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.brand-sub {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--charcoal-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  padding: 0.45rem 0.78rem;
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--forest-deep);
+  background: var(--sage-soft);
+}
+
+.nav-link.active {
+  color: var(--forest-deep);
+  background: var(--sand);
+  font-weight: 600;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-shrink: 0;
+}
+
+.mobile-toggle {
+  display: none;
+  background: var(--sand);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.72rem;
+  font-size: 1.15rem;
+  cursor: pointer;
+  color: var(--forest-deep);
+}
+
+@media (max-width: 1280px) {
+  .mobile-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-collapse {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--ivory);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+    padding: 1.15rem 1.5rem 1.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .site-header.header-hero-top .nav-collapse .nav-link {
+    color: var(--forest-deep);
+  }
+
+  .nav-collapse.open {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 1121px) {
+  .nav-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    gap: 1rem;
+    margin-left: 1.25rem;
+  }
+}

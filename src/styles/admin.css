@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Admin Dashboard Layout & Components (Nature & Humanity Institutional Theme)
+   ========================================================================== */
+
+.admin-shell {
+  display: grid;
+  grid-template-columns: 265px 1fr;
+  min-height: 100vh;
+  background: var(--ivory);
+}
+
+.admin-sidebar {
+  background: var(--forest-deep);
+  color: var(--ivory);
+  padding: 1.45rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0 0.5rem 1rem;
+  border-bottom: 1px solid rgba(168, 185, 161, 0.2);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--ivory);
+}
+
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.admin-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.68rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.89rem;
+  color: rgba(247, 245, 239, 0.8);
+  transition: var(--transition);
+}
+
+.admin-nav-link:hover {
+  background: var(--evergreen);
+  color: var(--ivory);
+}
+
+.admin-nav-link.active {
+  background: var(--sage);
+  color: var(--forest-deep);
+  font-weight: 700;
+}
+
+.admin-main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.admin-topbar {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.95rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.admin-content {
+  padding: 1.85rem;
+  flex: 1;
+}
+
+.dashboard-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.85rem;
+}
+
+.dashboard-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.dashboard-card-label {
+  font-size: 0.82rem;
+  color: var(--charcoal-muted);
+  font-weight: 600;
+}
+
+.dashboard-card-value {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--forest-deep);
+  margin-top: 0.35rem;
+}
+
+.table-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.89rem;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 0.9rem 1rem;
+  background: var(--sand);
+  color: var(--forest-deep);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.data-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.table-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+@media (max-width: 960px) {
+  .admin-shell {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .dashboard-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,448 @@
+/* ==========================================================================
+   Cinematic 3D Storytelling Home Page Styles
+   ========================================================================== */
+
+.hero-cinematic {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 7.5rem 0 5rem;
+  overflow: hidden;
+  background: var(--forest-deep);
+  color: var(--ivory);
+}
+
+.hero-media-layer {
+  position: absolute;
+  top: 14%;
+  right: 6%;
+  bottom: 14%;
+  left: 63%;
+  z-index: 0;
+  will-change: transform;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(35, 75, 61, 0.18);
+}
+
+.hero-media-layer img,
+.hero-media-layer video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-image-collage {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.65rem;
+  padding: 0.65rem;
+  background: var(--ivory);
+}
+
+.hero-image-collage img {
+  min-width: 0;
+  min-height: 0;
+  object-fit: cover;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.hero-image-collage img:first-child {
+  grid-row: 1 / -1;
+}
+
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(22, 60, 50, 0.92) 0%, rgba(22, 60, 50, 0.48) 68%, rgba(22, 60, 50, 0.18) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-canvas-3d {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.72;
+}
+
+.hero-content-grid {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1.25fr 0.62fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.38rem 1rem;
+  border-radius: var(--radius-full);
+  background: rgba(168, 185, 161, 0.18);
+  border: 1px solid rgba(168, 185, 161, 0.4);
+  color: var(--sage);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.35rem;
+}
+
+.hero-title {
+  margin: 0 0 1.25rem;
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5.2vw, 4.1rem);
+  line-height: 1.08;
+  font-weight: 600;
+  color: var(--ivory);
+}
+
+.hero-description {
+  margin: 0 0 2rem;
+  font-size: 1.12rem;
+  color: rgba(247, 245, 239, 0.88);
+  max-width: 560px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.hero-glass-card {
+  background: rgba(247, 245, 239, 0.1);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(247, 245, 239, 0.22);
+  border-radius: var(--radius-lg);
+  width: min(100%, 290px);
+  justify-self: end;
+  padding: 1.15rem;
+  color: var(--ivory);
+  transform: perspective(1000px) rotateY(-4deg);
+  transition: transform 0.5s var(--ease-editorial);
+}
+
+.hero-glass-card > div:first-child {
+  font-size: 0.66rem !important;
+}
+
+.hero-glass-card > div:nth-child(2) {
+  font-size: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.hero-glass-card p {
+  margin-bottom: 0.8rem !important;
+  font-size: 0.78rem !important;
+  line-height: 1.5;
+}
+
+.hero-glass-card:hover {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.hero-scroll-cue {
+  position: absolute;
+  bottom: 1.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--evergreen);
+}
+
+.home-banners {
+  padding: 3.25rem 0;
+  background: #f3f7f2;
+}
+
+.home-banners-heading {
+  max-width: 660px;
+  margin-bottom: 1.35rem;
+}
+
+.banner-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 1.1rem;
+}
+
+.campaign-banner {
+  min-height: 205px;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  color: var(--ivory);
+  box-shadow: var(--shadow-md);
+  isolation: isolate;
+}
+
+.campaign-banner-tall {
+  min-height: 245px;
+}
+
+.campaign-banner img,
+.campaign-banner-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.campaign-banner img {
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-editorial);
+  z-index: -2;
+}
+
+.campaign-banner-overlay {
+  background: linear-gradient(180deg, rgba(22, 60, 50, 0.05), rgba(22, 60, 50, 0.88));
+  z-index: -1;
+}
+
+.campaign-banner-copy {
+  position: absolute;
+  inset: auto 1.35rem 1.25rem;
+  display: grid;
+  gap: 0.28rem;
+}
+
+.campaign-banner-copy small {
+  color: var(--sage);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.campaign-banner-copy strong {
+  max-width: 300px;
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  line-height: 1.1;
+}
+
+.campaign-banner-copy span:last-child {
+  font-size: 0.82rem;
+  color: rgba(247, 245, 239, 0.84);
+}
+
+.campaign-banner:hover img {
+  transform: scale(1.07);
+}
+
+.get-involved-images {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 0.65rem;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.get-involved-images img {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  object-fit: cover;
+}
+
+/* Sticky Mission Storytelling */
+.sticky-mission-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.sticky-media-column {
+  position: sticky;
+  top: 6.5rem;
+}
+
+.mission-chapter {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(168, 185, 161, 0.22);
+}
+
+.mission-chapter:last-child {
+  border-bottom: none;
+}
+
+.mission-chapter-num {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--sage);
+  margin-bottom: 0.45rem;
+}
+
+/* Areas of Care 3D Depth Cards */
+.care-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  transition: transform 0.45s var(--ease-editorial), box-shadow 0.45s var(--ease-editorial);
+}
+
+.care-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.care-card-media {
+  height: 210px;
+  overflow: hidden;
+}
+
+.care-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-editorial);
+}
+
+.care-card:hover .care-card-media img {
+  transform: scale(1.06);
+}
+
+.care-card-body {
+  padding: 1.45rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Statistics Strip */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.65rem 1.25rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 0.85rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.15rem;
+  background: var(--sage-soft);
+  color: var(--forest-deep);
+}
+
+.stat-value {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--forest-deep);
+  line-height: 1.15;
+}
+
+.stat-label {
+  font-size: 0.88rem;
+  color: var(--charcoal-muted);
+  margin-top: 0.35rem;
+}
+
+/* Environmental Responsibility Section */
+.env-section {
+  position: relative;
+  overflow: hidden;
+  color: var(--ivory);
+  background: var(--forest-deep);
+}
+
+.env-bg-media {
+  position: absolute;
+  inset: 0;
+  opacity: 0.28;
+  z-index: 0;
+}
+
+.env-bg-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.env-content {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 992px) {
+  .hero-content-grid,
+  .sticky-mission-grid {
+    grid-template-columns: 1fr;
+  }
+  .sticky-media-column {
+    position: static;
+  }
+  .hero-glass-card {
+    transform: none;
+  }
+  .hero-media-layer {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 38%;
+    border-radius: 0;
+    opacity: 0.3;
+  }
+  .banner-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .campaign-banner-tall {
+    grid-column: 1 / -1;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 580px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-cinematic {
+    padding: 6.5rem 0 4rem;
+  }
+  .hero-media-layer {
+    left: 0;
+    opacity: 0.2;
+  }
+  .banner-grid {
+    grid-template-columns: 1fr;
+  }
+  .campaign-banner,
+  .campaign-banner-tall {
+    min-height: 205px;
+    grid-column: auto;
+  }
+}
