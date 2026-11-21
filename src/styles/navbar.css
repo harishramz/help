@@ -6,7 +6,7 @@
   position: sticky;
   top: 0;
   z-index: 950;
-  background: rgba(247, 245, 239, 0.94);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
   transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
@@ -15,8 +15,8 @@
 .site-header.header-hero-top {
   position: fixed;
   width: 100%;
-  background: rgba(22, 60, 50, 0.78);
-  border-bottom-color: rgba(247, 245, 239, 0.14);
+  background: rgba(7, 27, 42, 0.94);
+  border-bottom-color: rgba(255, 255, 255, 0.18);
 }
 
 .site-header.header-hero-top .brand-logo,
@@ -25,25 +25,25 @@
 }
 
 .site-header.header-hero-top .brand-sub {
-  color: rgba(247, 245, 239, 0.78);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .site-header.header-hero-top .nav-link:hover,
 .site-header.header-hero-top .nav-link.active {
-  background: rgba(247, 245, 239, 0.16);
+  background: rgba(255, 255, 255, 0.16);
   color: var(--ivory);
 }
 
 .site-header.header-hero-top .mobile-toggle {
-  background: rgba(247, 245, 239, 0.15);
-  border-color: rgba(247, 245, 239, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
   color: var(--ivory);
 }
 
 .site-header.header-scrolled {
   position: fixed;
   width: 100%;
-  background: rgba(247, 245, 239, 0.96);
+  background: rgba(255, 255, 255, 0.98);
   box-shadow: var(--shadow-sm);
 }
 
@@ -74,12 +74,17 @@
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--forest-deep);
+  line-height: 0;
   flex-shrink: 0;
+}
+
+.brand-image {
+  display: block;
+  width: min(205px, 24vw);
+  height: auto;
+  max-height: 58px;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
 .brand-mark {
@@ -87,7 +92,7 @@
   height: 38px;
   border-radius: 10px;
   background: linear-gradient(135deg, var(--forest-deep), var(--evergreen));
-  border: 1px solid rgba(168, 185, 161, 0.45);
+  border: 1px solid rgba(99, 213, 245, 0.45);
   color: var(--ivory);
   display: grid;
   place-items: center;
@@ -192,6 +197,12 @@
   .nav-actions {
     flex-direction: column;
     align-items: stretch;
+  }
+}
+
+@media (max-width: 520px) {
+  .brand-image {
+    width: 172px;
   }
 }
 

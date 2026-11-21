@@ -23,7 +23,7 @@
   align-items: center;
   gap: 0.65rem;
   padding: 0 0.5rem 1rem;
-  border-bottom: 1px solid rgba(168, 185, 161, 0.2);
+  border-bottom: 1px solid rgba(99, 213, 245, 0.2);
   font-family: var(--font-serif);
   font-weight: 700;
   color: var(--ivory);
@@ -42,7 +42,7 @@
   padding: 0.68rem 0.9rem;
   border-radius: var(--radius-sm);
   font-size: 0.89rem;
-  color: rgba(247, 245, 239, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   transition: var(--transition);
 }
 

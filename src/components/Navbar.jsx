@@ -49,13 +49,11 @@ export default function Navbar() {
 
         <div className="container navbar-inner">
           <Link to="/" className="brand-logo" onClick={closeMenu}>
-            <span className="brand-mark" aria-hidden="true">
-              TG
-            </span>
-            <span>
-              {siteContent.trustName}
-              <span className="brand-sub">{siteContent.tagline}</span>
-            </span>
+            <img
+              className="brand-image"
+              src="/assets/images/thisaigal/thisaigal-logo.png"
+              alt={`${siteContent.trustName} logo`}
+            />
           </Link>
 
           <button

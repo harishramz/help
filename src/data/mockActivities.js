@@ -9,7 +9,7 @@ export const mockActivities = [
       'Distributed premium notebooks, colour pencils, and school kits to students with 100% transparency through donor support.',
     imageUrl: '/assets/images/thisaigal/thisaigal_children_kits.jpeg',
     imageLabel: 'Child Welfare & Education Kits',
-    accentColor: '#234B3D',
+    accentColor: '#084c68',
     isPublished: true
   },
   {
@@ -22,7 +22,7 @@ export const mockActivities = [
       '16-day community awareness campaign (Nov 25 – Dec 10) alongside our Legal & Advocacy Center for Women offering free legal aid and counseling.',
     imageUrl: '/assets/images/thisaigal/thisaigal_women_rights_campaign.jpeg',
     imageLabel: 'Women Rights & Legal Advocacy',
-    accentColor: '#163C32',
+    accentColor: '#071b2a',
     isPublished: true
   },
   {
@@ -35,7 +35,7 @@ export const mockActivities = [
       'Jointly organized with Nehru Yuva Kendra Villupuram (Ministry of Youth Affairs & Sports) to empower youth voices for India@2047.',
     imageUrl: '/assets/images/thisaigal/thisaigal_yuva_samvad.jpeg',
     imageLabel: 'Yuva Samvad Seminar',
-    accentColor: '#8A6A4F',
+    accentColor: '#087ea4',
     isPublished: true
   },
   {
@@ -48,7 +48,7 @@ export const mockActivities = [
       'Supporting women entrepreneurs, Farmer Producer Organization (FPO) members, and IBM Vocational Training Center skill development cohorts.',
     imageUrl: '/assets/images/thisaigal/thisaigal_tanuvas_seminar.jpeg',
     imageLabel: 'Skill & FPO Training',
-    accentColor: '#234B3D',
+    accentColor: '#084c68',
     isPublished: true
   },
   {
@@ -61,7 +61,7 @@ export const mockActivities = [
       'Community celebration supporting children’s well-being, social adaptation, and essential school supplies.',
     imageUrl: '/assets/images/thisaigal/thisaigal_child_welfare.jpeg',
     imageLabel: 'Child Well-being Drive',
-    accentColor: '#163C32',
+    accentColor: '#071b2a',
     isPublished: true
   },
   {
@@ -74,7 +74,7 @@ export const mockActivities = [
       'Direct relief support for families facing medical treatments, accidents, and household hardship through ThisaiGal Relief Funds.',
     imageUrl: '/assets/images/thisaigal/thisaigal_community_outreach2.jpeg',
     imageLabel: 'ThisaiGal Relief Outreach',
-    accentColor: '#234B3D',
+    accentColor: '#084c68',
     isPublished: true
   }
 ];

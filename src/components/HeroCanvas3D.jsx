@@ -58,7 +58,7 @@ export default function HeroCanvas3D() {
 
         ctx.beginPath();
         ctx.arc(sx, sy, radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(168, 185, 161, ${alpha})`;
+        ctx.fillStyle = `rgba(99, 213, 245, ${alpha})`;
         ctx.fill();
       }
 

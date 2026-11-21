@@ -102,7 +102,7 @@ export function TrustProvider({ children }) {
         .join('')
         .slice(0, 2)
         .toUpperCase(),
-      avatarColor: '#234B3D',
+      avatarColor: '#084c68',
       amountReceived: 0,
       updates: [{ date: new Date().toISOString().slice(0, 10), note: 'Case created by Trust Admin.' }],
       supportingDocs: reqData.supportingDocs || [{ label: 'Trust Field Verification Record', verified: true }],
@@ -287,7 +287,7 @@ export function TrustProvider({ children }) {
   const addActivity = (actData) => {
     const newAct = {
       id: `ACT-${700 + activities.length + Date.now() % 1000}`,
-      accentColor: '#234B3D',
+      accentColor: '#084c68',
       isPublished: true,
       ...actData
     };

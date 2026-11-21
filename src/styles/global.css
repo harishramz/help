@@ -3,37 +3,37 @@
    ========================================================================== */
 
 :root {
-  --forest-deep: #163C32;
-  --evergreen: #234B3D;
-  --sage: #A8B9A1;
-  --sage-soft: rgba(168, 185, 161, 0.22);
-  --ivory: #F7F5EF;
-  --sand: #E8DFD0;
-  --earth: #8A6A4F;
-  --charcoal: #252A27;
-  --charcoal-muted: #525954;
+  --forest-deep: #071b2a;
+  --evergreen: #084c68;
+  --sage: #63d5f5;
+  --sage-soft: rgba(8, 169, 232, 0.14);
+  --ivory: #f5fbfe;
+  --sand: #dff5fc;
+  --earth: #087ea4;
+  --charcoal: #142530;
+  --charcoal-muted: #4a6470;
   --white: #FFFFFF;
 
   --bg-page: var(--ivory);
-  --bg-card: #FCFBF7;
-  --border-color: rgba(22, 60, 50, 0.12);
-  --border-strong: rgba(22, 60, 50, 0.24);
+  --bg-card: #ffffff;
+  --border-color: rgba(8, 76, 104, 0.14);
+  --border-strong: rgba(8, 76, 104, 0.28);
 
-  --danger: #9F2B2B;
-  --danger-bg: #FBEAEA;
-  --warning: #925614;
-  --warning-bg: #FBF1DF;
-  --success: #1F5B45;
-  --success-bg: #E5EFEA;
-  --info: #234B3D;
-  --info-bg: #EAF0EC;
+  --danger: #b4233f;
+  --danger-bg: #fff0f3;
+  --warning: #8a5a00;
+  --warning-bg: #fff8e6;
+  --success: #087ea4;
+  --success-bg: #e2f7fd;
+  --info: #084c68;
+  --info-bg: #e7f6fc;
 
   --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-sans: 'Plus Jakarta Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  --shadow-sm: 0 2px 10px rgba(22, 60, 50, 0.05);
-  --shadow-md: 0 12px 32px rgba(22, 60, 50, 0.08);
-  --shadow-lg: 0 24px 56px rgba(22, 60, 50, 0.14);
+  --shadow-sm: 0 2px 10px rgba(7, 27, 42, 0.07);
+  --shadow-md: 0 12px 32px rgba(7, 27, 42, 0.1);
+  --shadow-lg: 0 24px 56px rgba(7, 27, 42, 0.16);
 
   --radius-sm: 8px;
   --radius-md: 14px;
@@ -114,7 +114,7 @@ button, input, select, textarea {
 }
 
 .section-forest .section-subtitle {
-  color: rgba(247, 245, 239, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .section-header {
@@ -144,7 +144,7 @@ button, input, select, textarea {
 }
 
 .section-forest .section-eyebrow {
-  background: rgba(168, 185, 161, 0.16);
+  background: rgba(99, 213, 245, 0.16);
   color: var(--sage);
 }
 
@@ -232,13 +232,13 @@ button, input, select, textarea {
 .btn-primary {
   background: var(--forest-deep);
   color: var(--ivory);
-  box-shadow: 0 8px 20px rgba(22, 60, 50, 0.18);
+  box-shadow: 0 8px 20px rgba(7, 27, 42, 0.18);
 }
 
 .btn-primary:hover {
   background: var(--evergreen);
   transform: translateY(-2px);
-  box-shadow: 0 12px 26px rgba(22, 60, 50, 0.25);
+  box-shadow: 0 12px 26px rgba(7, 27, 42, 0.25);
 }
 
 .btn-secondary {
@@ -247,7 +247,7 @@ button, input, select, textarea {
 }
 
 .btn-secondary:hover {
-  background: #73563E;
+  background: #075b7a;
   transform: translateY(-2px);
 }
 
@@ -257,7 +257,7 @@ button, input, select, textarea {
 }
 
 .btn-sage:hover {
-  background: #B8C7B2;
+  background: #8ee7fa;
   transform: translateY(-2px);
 }
 
@@ -284,14 +284,14 @@ button, input, select, textarea {
 }
 
 .btn-outline-light {
-  background: rgba(247, 245, 239, 0.08);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--ivory);
-  border-color: rgba(247, 245, 239, 0.42);
+  border-color: rgba(255, 255, 255, 0.42);
   backdrop-filter: blur(8px);
 }
 
 .btn-outline-light:hover {
-  background: rgba(247, 245, 239, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   border-color: var(--ivory);
 }
 
@@ -301,7 +301,7 @@ button, input, select, textarea {
 }
 
 .btn-danger:hover {
-  background: #822020;
+  background: #9f2440;
 }
 
 .btn-ghost {
@@ -310,7 +310,7 @@ button, input, select, textarea {
 }
 
 .btn-ghost:hover {
-  background: rgba(22, 60, 50, 0.07);
+  background: rgba(7, 27, 42, 0.07);
   color: var(--forest-deep);
 }
 
@@ -426,10 +426,10 @@ button, input, select, textarea {
 .status-pending { background: var(--warning-bg); color: var(--warning); }
 .status-review { background: #E9EEF2; color: #2D4A5E; }
 .status-verified { background: var(--success-bg); color: var(--success); }
-.status-published { background: #E3ECE8; color: var(--forest-deep); }
+.status-published { background: #e7f6fc; color: var(--forest-deep); }
 .status-progress { background: #EFECE6; color: var(--earth); }
 .status-partial { background: #F7ECE2; color: #8A5226; }
-.status-completed { background: #DCEAE2; color: #163C32; }
+.status-completed { background: #dff5fc; color: #071b2a; }
 .status-rejected { background: var(--danger-bg); color: var(--danger); }
 
 /* Progress Bar */
@@ -482,7 +482,7 @@ button, input, select, textarea {
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(22, 60, 50, 0.55);
+  background: rgba(7, 27, 42, 0.55);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
@@ -537,14 +537,14 @@ button, input, select, textarea {
 .page-hero p {
   margin: 0 auto;
   max-width: 660px;
-  color: rgba(247, 245, 239, 0.85);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 1.06rem;
 }
 
 /* Premium Deep Forest Green Footer */
 .site-footer {
   background: var(--forest-deep);
-  color: rgba(247, 245, 239, 0.82);
+  color: rgba(255, 255, 255, 0.82);
   padding: 4.5rem 0 2.25rem;
   position: relative;
   overflow: hidden;
@@ -596,14 +596,14 @@ button, input, select, textarea {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(168, 185, 161, 0.2);
+  border-top: 1px solid rgba(99, 213, 245, 0.2);
   padding-top: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
   font-size: 0.85rem;
-  color: rgba(247, 245, 239, 0.65);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 @media (max-width: 900px) {
